@@ -85,7 +85,7 @@ def get_embeddings(
     try:
         input_embed = model.get_input_embeddings()
 
-    except (AttributeError, NotImplementedError):
+    except (TypeError, AttributeError, NotImplementedError):
         input_embed = None
 
     try:
